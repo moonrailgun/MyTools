@@ -4,6 +4,9 @@ interface Routes {
   [section: string]: RouteItem[];
 }
 
+/**
+ * 路由
+ */
 export const routes: Routes = {
   tools: [
     // 工具箱
