@@ -48,7 +48,7 @@ const VehiclePage: React.FC = () => {
             `${item.name}(${item.year}) - ${Math.round(item.score * 100)}%`
         )
       );
-    } catch (err) {
+    } catch (err: any) {
       notification.error({ message: String(err) });
     } finally {
       setLoading(false);

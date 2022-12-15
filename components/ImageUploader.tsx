@@ -1,6 +1,10 @@
 import React, { useCallback } from 'react';
 import Dragger from 'antd/lib/upload/Dragger';
-import { UploadFile, UploadChangeParam } from 'antd/lib/upload/interface';
+import {
+  UploadFile,
+  UploadChangeParam,
+  RcFile,
+} from 'antd/lib/upload/interface';
 import { usePaste } from '../utils/hooks/usePaste';
 import { isPasteImage } from '../utils/image-helper';
 import { message } from 'antd';
@@ -53,7 +57,7 @@ export const ImageUploader: React.FC<ImageUploaderProps> = React.memo(
             size: rawFile.size,
             name: rawFile.name,
             type: rawFile.type,
-            originFileObj: rawFile,
+            originFileObj: rawFile as RcFile,
             status: 'done',
           };
 

@@ -45,7 +45,7 @@ const TranslatePage: React.FC = () => {
         });
 
         setOutput(data.result?.text);
-      } catch (err) {
+      } catch (err: any) {
         console.error(err);
         message.error(String(err));
       }

@@ -11,7 +11,7 @@ const handler: NextApiHandler = async (req, res) => {
         `https://translate.google.cn/translate_tts?ie=UTF-8&tl=${lang}&client=tw-ob&q=${text}`
       )
       .pipe(res);
-  } catch (err) {
+  } catch (err: any) {
     res.status(500).json(err.message);
   }
 };

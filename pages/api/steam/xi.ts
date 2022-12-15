@@ -2,7 +2,7 @@ import { NextApiHandler } from 'next';
 import axios from 'axios';
 import { load } from 'cheerio';
 
-const handler: NextApiHandler = async (req, res) => {
+const handler: NextApiHandler = async (_req, res) => {
   try {
     const { data: html } = await axios.get('https://steamstats.cn/xi', {
       headers: {
@@ -41,7 +41,7 @@ const handler: NextApiHandler = async (req, res) => {
     }));
 
     res.status(200).json({ result: true, data });
-  } catch (err) {
+  } catch (err: any) {
     res.status(500).json(err);
   }
 };

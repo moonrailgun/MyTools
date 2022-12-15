@@ -77,7 +77,7 @@ export async function getTKK() {
     const code = res.body.match(/tkk:'(.*?)'/);
     const tkk = code?.[1];
     return tkk;
-  } catch (err) {
+  } catch (err: any) {
     throw new Error(err);
   }
 }
@@ -319,7 +319,7 @@ export async function translate(tkk: string, text: string, opts: any) {
     }
 
     return result;
-  } catch (err) {
+  } catch (err: any) {
     console.error(err);
 
     if (err.statusCode !== undefined && err.statusCode !== 200) {

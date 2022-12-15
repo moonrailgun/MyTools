@@ -37,7 +37,7 @@ const handler: NextApiHandler = async (req, res) => {
     const result = await translate(tkk, text, { to });
 
     res.status(200).json({ result: result });
-  } catch (err) {
+  } catch (err: any) {
     console.error(err);
     res.status(500).json(err.message);
   }

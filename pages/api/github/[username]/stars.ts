@@ -9,7 +9,7 @@ const handler: NextApiHandler = async (req, res) => {
     res
       .status(200)
       .json({ result: true, repos: cache.data, updatedAt: cache.updatedAt });
-  } catch (err) {
+  } catch (err: any) {
     res.status(500).json(err);
   }
 };

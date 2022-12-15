@@ -22,7 +22,7 @@ export function jsonToGo(json: string, typename: any, flatten = true) {
   try {
     data = JSON.parse(json.replace(/:(\s*\d*)\.0/g, ':$1.1')); // hack that forces floats to stay as floats
     scope = data;
-  } catch (e) {
+  } catch (e: any) {
     return {
       go: '',
       error: e.message,
@@ -65,7 +65,7 @@ export function jsonToGo(json: string, typename: any, flatten = true) {
 
           // for each field counts how many times appears
           for (let i = 0; i < scopeLength; i++) {
-            const keys = Object.keys(scope[i]);
+            const keys = Object.keys(scope[i]) as string[];
             for (let k in keys) {
               let keyname = keys[k];
               if (!(keyname in allFields)) {

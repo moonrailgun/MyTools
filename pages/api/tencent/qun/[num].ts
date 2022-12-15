@@ -7,7 +7,7 @@ const handler: NextApiHandler = async (req, res) => {
   try {
     const link = await fetchGroupLink(Number(num));
     res.status(200).json({ result: true, link });
-  } catch (err) {
+  } catch (err: any) {
     res.status(500).json(err);
   }
 };

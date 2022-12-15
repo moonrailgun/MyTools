@@ -23,7 +23,7 @@ const handler: NextApiHandler = async (req, res) => {
     }
 
     res.status(200).json(data);
-  } catch (err) {
+  } catch (err: any) {
     console.error(err);
     res.status(500).json(err.message);
   }
