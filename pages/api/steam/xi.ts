@@ -1,6 +1,7 @@
 import { NextApiHandler } from 'next';
 import axios from 'axios';
 import { load } from 'cheerio';
+import { allowCors } from '../../../utils/cors';
 
 const handler: NextApiHandler = async (_req, res) => {
   try {
@@ -46,4 +47,4 @@ const handler: NextApiHandler = async (_req, res) => {
   }
 };
 
-export default handler;
+export default allowCors(handler);
