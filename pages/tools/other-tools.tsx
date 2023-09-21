@@ -36,6 +36,10 @@ const OtherToolPage: React.FC = () => {
       name: 'waifulabs',
       url: 'https://waifulabs.com/',
     },
+    {
+      name: '在线纯前端图片加水印',
+      url: 'https://github.com/dxcweb/watermark',
+    },
   ];
 
   return (
