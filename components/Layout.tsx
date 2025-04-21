@@ -91,7 +91,7 @@ const BaseLayout: React.FC<{
 
       return (
         <Menu.Item key={link}>
-          <Link href={link}>
+          <Link href={link} legacyBehavior>
             <a>{title}</a>
           </Link>
         </Menu.Item>
@@ -125,7 +125,7 @@ const BaseLayout: React.FC<{
             style={{ overflow: 'auto', flex: 1 }}
           >
             <Menu.Item key="/" icon={<HomeOutlined />}>
-              <Link href="/">
+              <Link href="/" legacyBehavior>
                 <a>主页</a>
               </Link>
             </Menu.Item>

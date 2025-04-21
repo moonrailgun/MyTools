@@ -17,6 +17,7 @@ export const routes: Routes = {
     ['/tools/nsfw', 'NSFW'],
     ['/tools/dev', 'Dev'],
     ['/tools/jwt-decode', 'JWT解包'],
+    ['/tools/tokenizer', 'Token计数'],
     ['/tools/other-tools', '其他实用工具'],
   ],
   sandbox: [
